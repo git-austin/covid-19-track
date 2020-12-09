@@ -39,17 +39,22 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Column(
           children: [
+            FittedBox(
+                child: Hero(
+                    tag: "Logo",
+                    child: Container(
+                        child: Image.network(
+                            "https://www.collegeboreal.ca/static/assets/img/logo-black.png"),
+                        padding: EdgeInsets.fromLTRB(20, 20, 20, 60)))),
             Center(
                 child: Text(
-              "\nBienvenu!",
+              "Bienvenu!",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 50,
                   color: Colors.black),
             )),
             Center(child: Text("S.V.P. Sign in")),
-            Text(""),
-            Text(""),
             Text(""),
             Text(""),
             Text(""),
@@ -90,6 +95,13 @@ class Warning extends StatelessWidget {
             padding: EdgeInsets.all(20),
             alignment: Alignment.center,
             child: Column(children: [
+              FittedBox(
+                  child: Hero(
+                      tag: "Logo",
+                      child: Container(
+                          child: Image.network(
+                              "https://www.collegeboreal.ca/static/assets/img/logo-black.png"),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 60)))),
               Text(
                   "Afin d'entré au campus, tu as besoin de compléter une questionnaire."),
               Text(""),
@@ -123,10 +135,12 @@ class Quiz extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: Column(children: [
               FittedBox(
-                  child: Container(
-                      child: Image.network(
-                          "https://www.collegeboreal.ca/static/assets/img/logo-black.png"),
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 60))),
+                  child: Hero(
+                      tag: "Logo",
+                      child: Container(
+                          child: Image.network(
+                              "https://www.collegeboreal.ca/static/assets/img/logo-black.png"),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 60)))),
               Text("\nComment sens-tu aujourd'hui, " + this.username + "?"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -309,6 +323,13 @@ class EndScreen extends StatelessWidget {
         appBar: AppBar(title: Text("Résultats")),
         body: Container(
             child: Column(children: [
+          FittedBox(
+              child: Hero(
+                  tag: "Logo",
+                  child: Container(
+                      child: Image.network(
+                          "https://www.collegeboreal.ca/static/assets/img/logo-black.png"),
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 60)))),
           Text(this.resultat,
               style:
                   TextStyle(color: this.couleur, fontWeight: FontWeight.bold)),
